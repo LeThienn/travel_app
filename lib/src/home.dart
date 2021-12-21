@@ -16,7 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       _selectedIndex = index;
     });
-    pageController.animateToPage(index, duration: const Duration(milliseconds: 900), curve: Curves.fastLinearToSlowEaseIn);
+    pageController.jumpToPage(index);
+    //duration: const Duration(milliseconds: 900), curve: Curves.fastLinearToSlowEaseIn
   }
 
   @override
@@ -26,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       //   title: const Text('GFG'),
       // ),
       body: PageView(
+        
         controller: pageController,
         children: [
           Container(
@@ -50,6 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: '')
           ],
+          backgroundColor: Colors.white,
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.black,
