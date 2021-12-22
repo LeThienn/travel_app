@@ -45,7 +45,7 @@ class _InfoProfileWidgetState extends State<InfoProfileWidget> {
                     ),
                     const Expanded(
                       child: Icon(
-                        Icons.arrow_forward,
+                        Icons.keyboard_arrow_right,
                         color: Colors.grey,
                       ),
                     )

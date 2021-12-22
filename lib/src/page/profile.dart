@@ -45,21 +45,33 @@ class _PersonWidgetState extends State<PersonWidget> {
             flex: 2,
             child: Container(
               child: Column(
-                children: const [
-                  SizedBox(
-                    height: 40,
+                children: [
+                  const SizedBox(
+                    height: 30,
                   ),
-                  InfoProfileWidget(
+                  Row(
+                    children: const [
+                      Padding(padding: EdgeInsets.only(left: 40)),
+                      Text(
+                        "General",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            color: Colors.grey),
+                      )
+                    ],
+                  ),
+                  const InfoProfileWidget(
                     name: "My tickets",
                     iconData: Icons.airplane_ticket_outlined,
                   ),
-                  InfoProfileWidget(
+                  const InfoProfileWidget(
                       name: "Profile settings", iconData: Icons.person_outline),
-                  InfoProfileWidget(
+                  const InfoProfileWidget(
                     name: "Payment",
                     iconData: Icons.payment_outlined,
                   ),
-                  InfoProfileWidget(
+                  const InfoProfileWidget(
                     name: "Notification",
                     iconData: Icons.notifications_active_outlined,
                   )
