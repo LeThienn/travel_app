@@ -6,9 +6,9 @@ class AddressPersonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.white70,
+      color: Colors.white,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(25.0),
+        borderRadius: BorderRadius.circular(22.0),
       ),
       child: const Padding(
         padding: EdgeInsets.all(20),

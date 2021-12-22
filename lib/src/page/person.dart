@@ -15,8 +15,9 @@ class _PersonWidgetState extends State<PersonWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue.shade50,
+      backgroundColor: Colors.grey.shade100,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Row(
             children: [
@@ -57,11 +58,11 @@ class _PersonWidgetState extends State<PersonWidget> {
             ],
           ),
           const SizedBox(
-            height: 30,
+            height: 20,
           ),
           _buildImage(),
           const SizedBox(
-            height: 10,
+            height: 20,
           ),
           _buildNamePerson(),
           const SizedBox(
@@ -69,19 +70,25 @@ class _PersonWidgetState extends State<PersonWidget> {
           ),
           _buildAddressPerson(),
           const SizedBox(
-            height: 10,
+            height: 40,
           ),
           Container(
             child: Column(
               children: [
-                const SizedBox(height: 55,),
+                const SizedBox(height: 50 ,),
                 _buildInfoPerson(),
-                _buildInfoPerson(),
-                _buildInfoPerson(),
-                _buildInfoPerson()
+                // const SizedBox(height: 10,),
+                // const Divider(height: 1, thickness: 1, color: Colors.grey,indent: 90,endIndent: 44),
+                // _buildInfoPerson(),
+                // const SizedBox(height: 10,),
+                // const Divider(height: 1, thickness: 1, color: Colors.grey,indent: 90,endIndent: 44),
+                // _buildInfoPerson(),
+                // const SizedBox(height: 10,),
+                // const Divider(height: 1, thickness: 1, color: Colors.grey,indent: 90,endIndent: 44),
+                // _buildInfoPerson(),
               ],
             ),
-            height: 299.7,
+           
             width: double.infinity,
             decoration: const BoxDecoration(
               color: Colors.white,

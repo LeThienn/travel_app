@@ -47,12 +47,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: '',),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: '')
+            BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: '',),
+            BottomNavigationBarItem(icon: Icon(Icons.search_outlined), label: ''),
+            BottomNavigationBarItem(icon: Icon(Icons.bookmark_outline), label: ''),
+            BottomNavigationBarItem(icon: Icon(Icons.settings_outlined), label: '')
           ],
-          backgroundColor: Colors.white,
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.black,
