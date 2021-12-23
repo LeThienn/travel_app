@@ -10,7 +10,7 @@ class ImageProfileWidget extends StatelessWidget {
       height: 120,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(30.0)),
-          color: Colors.blue),
+          color: Colors.white),
     );
   }
 }
