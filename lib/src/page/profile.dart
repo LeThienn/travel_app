@@ -15,7 +15,9 @@ class Profile  extends StatefulWidget {
 class _ProfiletState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Container(
+    color: Colors.grey.shade100,
+    child: Column(
       children: [
         Expanded(
             flex: 2,
@@ -84,6 +86,7 @@ class _ProfiletState extends State<Profile> {
           ),
         )
       ],
+    ),
     );
   }
 }

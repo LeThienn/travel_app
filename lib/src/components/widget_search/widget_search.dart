@@ -14,18 +14,24 @@ class _SearchWidgetState extends State<SearchWidget> {
       width: double.infinity,
       height: 50.0,
       decoration: BoxDecoration(
-          color: const Color(0x55d2d2d2),
+          color: Colors.white,
           borderRadius: BorderRadius.circular(30.0) // circular dạng hình tròn
           ),
       child: Row(
         children: const [
+          SizedBox(
+            width: 20,
+          ),
+          Icon(Icons.search),
           Expanded(
+              flex: 1,
               child: TextField(
-            decoration: InputDecoration(
-                hintText: "Search... ",
-                border: InputBorder.none, // mấy dòng nhập
-                contentPadding: EdgeInsets.only(left: 20.0)),
-          )), // expanded chia bố cục
+                decoration: InputDecoration(
+                    hintText: "Where do you want to go?",
+                    border: InputBorder.none, // mấy dòng nhập
+                    contentPadding: EdgeInsets.only(left: 20.0)),
+              )),
+          // expanded chia bố cục
         ],
       ),
     );
