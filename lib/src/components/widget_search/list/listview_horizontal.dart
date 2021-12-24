@@ -14,15 +14,18 @@ class _ListViewHorizontalTravelState extends State<ListViewHorizontalTravel> {
     Travel(name: "Lighthouse", location: "Edinburgh"),
     Travel(name: "Eiffel tower", location: "Paris"),
     Travel(name: "Big Ben", location: "London"),
+    Travel(name: "Hội An", location: "Hà Nội"),
+    Travel(name: "Vịnh Hạ Long", location: "Quảng Ninh"),
   ];
   @override
   Widget build(BuildContext context) {
+   
     return ListView.builder(
         itemCount: travel.length,
         scrollDirection: Axis.horizontal,
-        itemBuilder: (BuildContext context, int index) {
+        itemBuilder: (BuildContext contFext, int index) {
           return Container(
-            padding: const EdgeInsets.only(left: 15, top: 15),
+            padding: const EdgeInsets.only(left: 8, top: 15, right: 8),
             height: 300, // chieu dai cua tung card
             child: SizedBox(
                 width: 170.0,
@@ -80,6 +83,5 @@ class _ListViewHorizontalTravelState extends State<ListViewHorizontalTravel> {
                 )),
           );
         });
-    // );
   }
 }
