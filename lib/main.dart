@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:travel_app/src/onboarding/onboarding_screen.dart';
 
 import 'src/bottom_navigation.dart';
 
@@ -21,4 +22,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
