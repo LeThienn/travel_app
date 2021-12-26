@@ -19,66 +19,58 @@ class _ListViewHorizontalTravelState extends State<ListViewHorizontalTravel> {
   ];
   @override
   Widget build(BuildContext context) {
-   
     return ListView.builder(
         itemCount: travel.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (BuildContext contFext, int index) {
           return Container(
             padding: const EdgeInsets.only(left: 8, top: 15, right: 8),
-            height: 300, // chieu dai cua tung card
             child: SizedBox(
-                width: 170.0,
+                width: 150.0,
                 child: Column(
                   children: [
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        decoration: const BoxDecoration(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20.0)),
-                            color: Colors.blue),
-                      ),
+                    Container(
+                      height: 150,
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                          color: Colors.blue),
                     ),
-                    Expanded(
-                      flex: 2,
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              const SizedBox(
-                                width: 10,
-                                height: 35,
-                              ),
-                              Text(
-                                travel[index].name,
-                                style: const TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              const SizedBox(
-                                width: 7,
-                              ),
-                              const Icon(
-                                Icons.location_on,
-                                color: Colors.blue,
-                              ),
-                              Text(
-                                travel[index].location,
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.blue),
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    )
+                    Column(
+                      children: [
+                        Row(
+                          children: [
+                            const SizedBox(
+                              width: 10,
+                              height: 35,
+                            ),
+                            Text(
+                              travel[index].name,
+                              style: const TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            const SizedBox(
+                              width: 7,
+                            ),
+                            const Icon(
+                              Icons.location_on,
+                              color: Colors.blue,
+                            ),
+                            Text(
+                              travel[index].location,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.blue),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ],
                 )),
           );
