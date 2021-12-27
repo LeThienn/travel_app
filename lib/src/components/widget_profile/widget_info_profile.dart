@@ -16,10 +16,11 @@ class InfoProfileWidget extends StatefulWidget {
 class _InfoProfileWidgetState extends State<InfoProfileWidget> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+          padding: const EdgeInsets.fromLTRB(20, 17, 20, 0),
           child: Column(
             children: [
               Container(
@@ -32,13 +33,13 @@ class _InfoProfileWidgetState extends State<InfoProfileWidget> {
                         color: Colors.blue,
                       ),
                     ),
-                    const SizedBox(width: 15),
+                    SizedBox(width: size.width * 0.02),
                     Expanded(
                       flex: 4,
                       child: Text(
                         widget.name,
-                        style: const TextStyle(
-                            fontSize: 17,
+                        style: TextStyle(
+                            fontSize: size.height * 0.022,
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.bold),
                       ),
@@ -57,15 +58,8 @@ class _InfoProfileWidgetState extends State<InfoProfileWidget> {
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.white),
               ),
-              const SizedBox(
-                height: 7,
-              ),
-              const Divider(
-                  height: 1,
-                  thickness: 1,
-                  color: Colors.grey,
-                  indent: 72,
-                  endIndent: 28),
+             
+            
             ],
           ),
         )

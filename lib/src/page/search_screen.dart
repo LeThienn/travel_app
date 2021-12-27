@@ -3,14 +3,14 @@ import 'package:travel_app/src/components/widget_search/list/listview_horizontal
 import 'package:travel_app/src/components/widget_search/widget_search.dart';
 import 'package:travel_app/src/components/widget_search/widget_title_search.dart';
 
-class Search extends StatefulWidget {
-  const Search({Key? key}) : super(key: key);
+class SearchScreen extends StatefulWidget {
+  const SearchScreen({Key? key}) : super(key: key);
 
   @override
-  _SearchState createState() => _SearchState();
+  _SearchScreenState createState() => _SearchScreenState();
 }
 
-class _SearchState extends State<Search> {
+class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,7 +48,6 @@ class _SearchState extends State<Search> {
               flex: 3, // ??
               child: _buildListHorizontal(),
             ),
-           
           ],
         ));
   }
