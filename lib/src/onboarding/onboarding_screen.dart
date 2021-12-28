@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:travel_app/src/bottom_navigation.dart';
+import 'package:travel_app/src/bottom_navigation_screen.dart';
 import 'package:travel_app/src/components/widget_onboarding/widget_text_onboarding.dart';
 import 'package:travel_app/src/resource/model/onboarding.dart';
 
@@ -32,13 +32,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         setState(() {
           curenPage += 1;
           if (curenPage == onBoarding.length - 1) {
-            // cai nay em tu ve code
-          //  Navigator.of(context).push(MaterialPageRoute(
-          //                   builder: (context) => const HomeScreen()));
+            Future.delayed(const Duration(seconds: 4), () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const BottomNavigationScreen()));
+            });
           }
         });
         pageviewController.animateToPage(curenPage,
-            duration: const Duration(milliseconds: 400), curve: Curves.easeIn,);
+            duration: const Duration(milliseconds: 300), curve: Curves.easeIn,);
       }
     });
   }

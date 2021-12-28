@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/src/resource/model/travel.dart';
 
-class ListViewHorizontalTravel extends StatefulWidget {
-  const ListViewHorizontalTravel({Key? key}) : super(key: key);
-
-  @override
-  _ListViewHorizontalTravelState createState() =>
-      _ListViewHorizontalTravelState();
-}
-
-class _ListViewHorizontalTravelState extends State<ListViewHorizontalTravel> {
+class ListViewHorizoltalTravel extends StatelessWidget {
+  ListViewHorizoltalTravel({Key? key}) : super(key: key);
+  
   final List<Travel> travel = [
     Travel(name: "Lighthouse", location: "Edinburgh"),
     Travel(name: "Eiffel tower", location: "Paris"),
@@ -17,6 +11,7 @@ class _ListViewHorizontalTravelState extends State<ListViewHorizontalTravel> {
     Travel(name: "Hội An", location: "Hà Nội"),
     Travel(name: "Vịnh Hạ Long", location: "Quảng Ninh"),
   ];
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(

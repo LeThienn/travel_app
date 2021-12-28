@@ -20,10 +20,12 @@ class _ProfileScreentState extends State<ProfileScreen> {
       color: Colors.grey.shade100,
       child: Column(
         children: [
-          Column(
+          Expanded(
+            flex: 1,
+            child:  Column(
             children: [
               SizedBox(
-                height: size.height * 0.05,
+                height: size.height * 0.03,
               ),
               _buildSettings(),
               SizedBox(
@@ -35,68 +37,74 @@ class _ProfileScreentState extends State<ProfileScreen> {
               ),
               _buildNamePerson(),
               SizedBox(
-                height: size.height * 0.025,
+                height: size.height * 0.02,
               ),
               _buildAddressPerson(),
             ],
           ),
+          ),
+         
           SizedBox(
             height: size.height * 0.037,
           ),
-          Container(
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(50), topRight: Radius.circular(50)),
+          Expanded(
+            flex: 1,
+            child: Container(
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(50),
+                    topRight: Radius.circular(50)),
+              ),
+              child: Column(
+                children: [
+                  _buildGenaral(size),
+                  const InfoProfileWidget(
+                    name: "My tickets",
+                    iconData: Icons.airplane_ticket_outlined,
+                  ),
+                  SizedBox(
+                    height: size.height * 0.017,
+                  ),
+                  const Divider(
+                      height: 1,
+                      thickness: 1,
+                      color: Colors.grey,
+                      indent: 85,
+                      endIndent: 48),
+                  const InfoProfileWidget(
+                      name: "Profile settings", iconData: Icons.person_outline),
+                  SizedBox(
+                    height: size.height * 0.017,
+                  ),
+                  const Divider(
+                      height: 1,
+                      thickness: 1,
+                      color: Colors.grey,
+                      indent: 85,
+                      endIndent: 48),
+                  const InfoProfileWidget(
+                    name: "Payment",
+                    iconData: Icons.payment_outlined,
+                  ),
+                  SizedBox(
+                    height: size.height * 0.017,
+                  ),
+                  const Divider(
+                      height: 1,
+                      thickness: 1,
+                      color: Colors.grey,
+                      indent: 85,
+                      endIndent: 48),
+                  const InfoProfileWidget(
+                    name: "Notification",
+                    iconData: Icons.notifications_active_outlined,
+                  )
+                ],
+              ),
             ),
-            child: Column(
-              children: [
-                _buildGenaral(size),
-                const InfoProfileWidget(
-                  name: "My tickets",
-                  iconData: Icons.airplane_ticket_outlined,
-                ),
-                SizedBox(
-                  height: size.height * 0.017,
-                ),
-                const Divider(
-                    height: 1,
-                    thickness: 1,
-                    color: Colors.grey,
-                    indent: 85,
-                    endIndent: 48),
-                const InfoProfileWidget(
-                    name: "Profile settings", iconData: Icons.person_outline),
-                SizedBox(
-                  height: size.height * 0.017,
-                ),
-                const Divider(
-                    height: 1,
-                    thickness: 1,
-                    color: Colors.grey,
-                    indent: 85,
-                    endIndent: 48),
-                const InfoProfileWidget(
-                  name: "Payment",
-                  iconData: Icons.payment_outlined,
-                ),
-                SizedBox(
-                  height: size.height * 0.017,
-                ),
-                const Divider(
-                    height: 1,
-                    thickness: 1,
-                    color: Colors.grey,
-                    indent: 85,
-                    endIndent: 48),
-                const InfoProfileWidget(
-                  name: "Notification",
-                  iconData: Icons.notifications_active_outlined,
-                )
-              ],
-            ),
-          ),
+          )
         ],
       ),
     );
@@ -105,7 +113,7 @@ class _ProfileScreentState extends State<ProfileScreen> {
 
 Widget _buildGenaral(Size size) {
   return Padding(
-    padding:  EdgeInsets.only(top: size.height * 0.03, right: size.width * 0.65),
+    padding: EdgeInsets.only(top: size.height * 0.03, right: size.width * 0.65),
     child: Text(
       "General",
       style: TextStyle(
