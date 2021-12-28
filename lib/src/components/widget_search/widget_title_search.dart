@@ -10,7 +10,7 @@ class SearchTextWidget extends StatelessWidget {
         const Expanded(
             flex: 3,
             child: Padding(
-              padding: EdgeInsets.only(top: 5, left: 40),
+              padding: EdgeInsets.only(top: 5),
               child: Text(
                 "Search",
                 style: TextStyle(
@@ -22,22 +22,19 @@ class SearchTextWidget extends StatelessWidget {
               ),
             )),
         Expanded(
-            flex: 1,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 10, right: 40),
-              child: ElevatedButton(
-                onPressed: () {},
-                child: const Icon(
-                  Icons.slideshow_outlined,
-                  color: Colors.red,
-                ),
-                style: ButtonStyle(
-                    shape: MaterialStateProperty.all(const CircleBorder()),
-                    padding:
-                        MaterialStateProperty.all(const EdgeInsets.all(10)),
-                    backgroundColor: MaterialStateProperty.all(Colors.white)),
-              ),
-            )),
+          flex: 0,
+          child: ElevatedButton(
+            onPressed: () {},
+            child: const Icon(
+              Icons.slideshow_outlined,
+              color: Colors.red,
+            ),
+            style: ButtonStyle(
+                shape: MaterialStateProperty.all(const CircleBorder()),
+                padding: MaterialStateProperty.all(const EdgeInsets.all(10)),
+                backgroundColor: MaterialStateProperty.all(Colors.white)),
+          ),
+        ),
       ],
     );
   }

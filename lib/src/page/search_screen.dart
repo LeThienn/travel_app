@@ -14,40 +14,50 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-        color: Colors.grey.shade100,
-        child: Column(
-          children: [
-            Column(
-              children: [
-                _buildSearchTitle(),
-                SizedBox(
-                  height: size.height * 0.015,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 40, right: 40),
-                  child: _buildSearch(),
-                ),
-                Row(
-                  children: const [
-                    Padding(
-                      padding: EdgeInsets.only(top: 18, left: 40),
-                      child: Text(
-                        "For you",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+    return Padding(
+      padding: const EdgeInsets.all(15),
+      child: Container(
+          color: Colors.grey.shade100,
+          child: Column(
+            children: [
+              Column(
+                children: [
+                  const SizedBox(height: 30,),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 7),
+                    child: _buildSearchTitle(),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.015,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 7, right: 7),
+                    child: _buildSearch(),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(left: 7),
+                        child: Text(
+                          "For you",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
                       ),
-                    )
-                  ],
-                ),
-              ],
-            ),
-            Expanded(
-              flex: 1, // ??
-              child: _buildListHorizontal(),
-            ),
-          ],
-        ));
+                    ],
+                  ),
+                ],
+              ),
+              Expanded(
+                flex: 1, // ??
+                child: _buildListHorizontal(),
+              ),
+            ],
+          )),
+    );
   }
 }
 
