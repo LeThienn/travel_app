@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:travel_app/src/resource/model/travel.dart';
+import 'package:travel_app/src/resource/model/foryou_travel.dart';
 
 class ListViewHorizoltalTravel extends StatelessWidget {
   ListViewHorizoltalTravel({Key? key}) : super(key: key);
@@ -48,11 +48,10 @@ class ListViewHorizoltalTravel extends StatelessWidget {
                 Container(
                   height: 150.0,
                   width: 160.0,
-                  decoration:  BoxDecoration(
+                  decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(30.0)),
                     image: DecorationImage(
-                      image: NetworkImage(
-                          travel[index].image),
+                      image: NetworkImage(travel[index].image),
                       fit: BoxFit.cover,
                     ),
                     // shape: BoxShape.circle,
@@ -61,43 +60,42 @@ class ListViewHorizoltalTravel extends StatelessWidget {
                 SizedBox(
                   width: 160, // fix chữ hỏi ??????
                   child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        const SizedBox(
-                          width: 10,
-                          height: 35,
-                        ),
-                        Text(
-                          travel[index].name,
-                          style: const TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        const SizedBox(
-                          width: 7,
-                        ),
-                        const Icon(
-                          Icons.location_on,
-                          color: Colors.blue,
-                        ),
-                        Text(
-                          travel[index].location,
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blue),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+                    children: [
+                      Row(
+                        children: [
+                          const SizedBox(
+                            width: 10,
+                            height: 35,
+                          ),
+                          Text(
+                            travel[index].name,
+                            style: const TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          const SizedBox(
+                            width: 7,
+                          ),
+                          const Icon(
+                            Icons.location_on,
+                            color: Colors.blue,
+                          ),
+                          Text(
+                            travel[index].location,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 )
-                
               ],
             ),
           );

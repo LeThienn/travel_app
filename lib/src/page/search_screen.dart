@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/src/components/widget_search/list/listview_horizontal_travel.dart';
+import 'package:travel_app/src/components/widget_search/list/listview_vertical_travel.dart';
 import 'package:travel_app/src/components/widget_search/widget_search_travel.dart';
 import 'package:travel_app/src/components/widget_search/widget_title_search.dart';
 
@@ -22,7 +23,9 @@ class _SearchScreenState extends State<SearchScreen> {
             children: [
               Column(
                 children: [
-                  const SizedBox(height: 30,),
+                  const SizedBox(
+                    height: 30,
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(left: 7),
                     child: _buildSearchTitle(),
@@ -55,6 +58,25 @@ class _SearchScreenState extends State<SearchScreen> {
                 flex: 1, // ??
                 child: _buildListHorizontal(),
               ),
+              
+              Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: 7,
+                    ),
+                    child: Text(
+                      "Popular",
+                      style:
+                          TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              ),
+              Expanded(
+                flex: 1,
+                child: _buildListVertivalTravel(),
+              )
             ],
           )),
     );
@@ -71,4 +93,8 @@ Widget _buildSearch() {
 
 Widget _buildListHorizontal() {
   return ListViewHorizoltalTravel();
+}
+
+Widget _buildListVertivalTravel() {
+  return ListViewVerticalTravel();
 }
