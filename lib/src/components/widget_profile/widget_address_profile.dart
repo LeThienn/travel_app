@@ -5,24 +5,25 @@ class AddressProfileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
-      width: 180,
-      height: 45,
+      width: size.width * 0.46,
+      height: size.height * 0.06,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(30.0)),
           color: Colors.white),
       child: Row(
-        children: const [
+        children:  [
           SizedBox(
-            width: 13,
+            width: size.width * 0.04,
           ),
-          Center(
+          const Center(
             child: Icon(Icons.location_on, color: Colors.blue,),
           ),
           SizedBox(
-            width: 10,
+            width: size.width * 0.02,
           ),
-          Text("Đống Đa, Hà Nội", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 15),)
+          Text("Đống Đa, Hà Nội", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: size.height * 0.02),)
         ],
       ),
     );

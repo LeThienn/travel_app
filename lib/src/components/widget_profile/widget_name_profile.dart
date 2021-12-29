@@ -5,14 +5,15 @@ class NameProfileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Column(
-      children: const [
+      children: [
         Text(
           "Lê Đức Thiện",
           style: TextStyle(
               fontStyle: FontStyle.normal,
               color: Colors.black,
-              fontSize: 25,
+              fontSize:  size.height * 0.025,
               fontWeight: FontWeight.bold),
         ),
       ],

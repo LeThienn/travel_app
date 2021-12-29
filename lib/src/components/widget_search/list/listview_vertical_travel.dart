@@ -41,7 +41,7 @@ class ListViewVerticalTravel extends StatelessWidget {
         scrollDirection: Axis.vertical,
         itemBuilder: (BuildContext contFext, int index) {
           return Container(
-            padding: const EdgeInsets.only(left: 8, top: 15, right: 8),
+            padding: const EdgeInsets.only(left: 8, top: 10, right: 8),
             child: Column(
               children: [
                 Container(

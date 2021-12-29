@@ -47,8 +47,8 @@ class InfoProfileWidget extends StatelessWidget {
                     )
                   ],
                 ),
-                height: 40,
-                width: 350,
+                height: size.height * 0.06,
+                width: size.width * 0.9,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.white),
