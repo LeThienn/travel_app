@@ -4,9 +4,10 @@ class ImageProfileWidget extends StatelessWidget {
   const ImageProfileWidget({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
-      height: 120.0,
-      width: 150.0,
+      height: size.height * 0.16,
+      width: size.width * 0.4,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(30.0)),
         image: DecorationImage(
