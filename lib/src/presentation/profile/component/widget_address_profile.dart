@@ -7,7 +7,7 @@ class AddressProfileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width * 0.46,
+      width: size.width * 0.51,
       height: size.height * 0.06,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -15,7 +15,7 @@ class AddressProfileWidget extends StatelessWidget {
       child: Row(
         children:  [
           SizedBox(
-            width: size.width * 0.04,
+            width: size.width * 0.05,
           ),
           const Center(
             child: Icon(Icons.location_on, color: Colors.blue,),

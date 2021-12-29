@@ -5,7 +5,6 @@ import 'package:travel_app/src/presentation/profile/component/widget_info_profil
 import 'package:travel_app/src/presentation/profile/component/widget_name_profile.dart';
 import 'package:travel_app/src/presentation/profile/component/widget_title_settings.dart';
 
-
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
@@ -23,10 +22,10 @@ class _ProfileScreentState extends State<ProfileScreen> {
         children: [
           Expanded(
             flex: 1,
-            child:  Column(
+            child: Column(
             children: [
               SizedBox(
-                height: size.height * 0.03,
+                height: size.height * 0.061,
               ),
               _buildSettings(),
               SizedBox(
@@ -34,78 +33,74 @@ class _ProfileScreentState extends State<ProfileScreen> {
               ),
               _buildImage(),
               SizedBox(
-                height: size.height * 0.025,
+                height: size.height * 0.03,
               ),
               _buildNamePerson(),
               SizedBox(
-                height: size.height * 0.02,
+                height: size.height * 0.03,
               ),
               _buildAddressPerson(),
             ],
           ),
           ),
-         
+          
           SizedBox(
-            height: size.height * 0.037,
+            height: size.height * 0.04,
           ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(50),
-                    topRight: Radius.circular(50)),
-              ),
-              child: Column(
-                children: [
-                  _buildGenaral(size),
-                  const InfoProfileWidget(
-                    name: "My tickets",
-                    iconData: Icons.airplane_ticket_outlined,
-                  ),
-                  SizedBox(
-                    height: size.height * 0.017,
-                  ),
-                  const Divider(
-                      height: 1,
-                      thickness: 1,
-                      color: Colors.grey,
-                      indent: 85,
-                      endIndent: 48),
-                  const InfoProfileWidget(
-                      name: "Profile settings", iconData: Icons.person_outline),
-                  SizedBox(
-                    height: size.height * 0.017,
-                  ),
-                  const Divider(
-                      height: 1,
-                      thickness: 1,
-                      color: Colors.grey,
-                      indent: 85,
-                      endIndent: 48),
-                  const InfoProfileWidget(
-                    name: "Payment",
-                    iconData: Icons.payment_outlined,
-                  ),
-                  SizedBox(
-                    height: size.height * 0.017,
-                  ),
-                  const Divider(
-                      height: 1,
-                      thickness: 1,
-                      color: Colors.grey,
-                      indent: 85,
-                      endIndent: 48),
-                  const InfoProfileWidget(
-                    name: "Notification",
-                    iconData: Icons.notifications_active_outlined,
-                  )
-                ],
-              ),
+          Container(
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(50), topRight: Radius.circular(50)),
             ),
-          )
+            child: Column(
+              children: [
+                _buildGenaral(size),
+                const InfoProfileWidget(
+                  name: "My tickets",
+                  iconData: Icons.airplane_ticket_outlined,
+                ),
+                SizedBox(
+                  height: size.height * 0.017,
+                ),
+                const Divider(
+                    height: 1,
+                    thickness: 1,
+                    color: Colors.grey,
+                    indent: 85,
+                    endIndent: 48),
+                const InfoProfileWidget(
+                    name: "Profile settings", iconData: Icons.person_outline),
+                SizedBox(
+                  height: size.height * 0.017,
+                ),
+                const Divider(
+                    height: 1,
+                    thickness: 1,
+                    color: Colors.grey,
+                    indent: 85,
+                    endIndent: 48),
+                const InfoProfileWidget(
+                  name: "Payment",
+                  iconData: Icons.payment_outlined,
+                ),
+                SizedBox(
+                  height: size.height * 0.017,
+                ),
+                const Divider(
+                    height: 1,
+                    thickness: 1,
+                    color: Colors.grey,
+                    indent: 85,
+                    endIndent: 48),
+                const InfoProfileWidget(
+                  name: "Notification",
+                  iconData: Icons.notifications_active_outlined,
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );

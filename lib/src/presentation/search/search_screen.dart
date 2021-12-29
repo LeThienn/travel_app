@@ -16,7 +16,7 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(10),
       child: Container(
           color: Colors.grey.shade100,
           child: Column(
@@ -25,7 +25,7 @@ class _SearchScreenState extends State<SearchScreen> {
               Column(
                 children: [
                   SizedBox(
-                    height: size.height * 0.035,
+                    height: size.height * 0.05,
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: size.width * 0.03),
@@ -57,10 +57,12 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                 ],
               ),
+              SizedBox(height: size.height * 0.01,),
               Expanded(
                 flex: 1,
                 child: _buildListHorizontal(),
               ),
+              SizedBox(height: size.height * 0.012,),
               Row(
                 children: [
                   Padding(

@@ -65,7 +65,7 @@ class ListViewHorizoltalTravel extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: size.width * 0.03,
-                            height: size.width * 0.07,
+                            height: size.width * 0.075,
                           ),
                           Text(
                             travelForYou[index].nameForYou,
