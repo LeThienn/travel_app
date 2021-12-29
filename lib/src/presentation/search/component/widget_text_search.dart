@@ -5,18 +5,19 @@ class SearchTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Row(
       children: [
-        const Expanded(
+        Expanded(
             flex: 3,
             child: Padding(
-              padding: EdgeInsets.only(top: 5),
+              padding: EdgeInsets.only(top: size.height * 0.02),
               child: Text(
                 "Search",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
-                    fontSize: 30,
+                    fontSize: size.height * 0.03,
                     fontStyle: FontStyle.normal,
                     decoration: TextDecoration.none),
               ),

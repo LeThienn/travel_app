@@ -10,26 +10,27 @@ class SearchTravelWidget extends StatefulWidget {
 class _SearchWidgetState extends State<SearchTravelWidget> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       width: double.infinity,
-      height: 50.0,
+      height: size.height * 0.06,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(30.0) // circular dạng hình tròn
           ),
       child: Row(
-        children: const [
+        children: [
           SizedBox(
-            width: 20,
+            width: size.width * 0.05,
           ),
-          Icon(Icons.search),
+          const Icon(Icons.search),
           Expanded(
               flex: 1,
               child: TextField(
                 decoration: InputDecoration(
                     hintText: "Where do you want to go?",
                     border: InputBorder.none, // mấy dòng nhập
-                    contentPadding: EdgeInsets.only(left: 20.0)),
+                    contentPadding: EdgeInsets.only(left: size.height * 0.03)),
               )),
           // expanded chia bố cục
         ],
