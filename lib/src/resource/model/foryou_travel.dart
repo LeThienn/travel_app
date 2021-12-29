@@ -1,6 +1,6 @@
-class Travel {
-  String image;
-  String name;
-  String location;
-  Travel({required this.name, required this.location, required this.image});
+class ForYouTravel {
+  String imageForYou;
+  String nameForYou;
+  String locationForYou;
+  ForYouTravel({required this.nameForYou, required this.locationForYou, required this.imageForYou});
 }

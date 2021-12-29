@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/src/page/profile_screen.dart';
-import 'package:travel_app/src/page/search_screen.dart';
+import 'package:travel_app/src/presentation/profile/profile_screen.dart';
+import 'package:travel_app/src/presentation/search/search_screen.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({Key? key}) : super(key: key);

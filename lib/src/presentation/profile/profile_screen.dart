@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/src/components/widget_profile/widget_address_profile.dart';
-import 'package:travel_app/src/components/widget_profile/widget_image_profile.dart';
-import 'package:travel_app/src/components/widget_profile/widget_info_profile.dart';
-import 'package:travel_app/src/components/widget_profile/widget_name_profile.dart';
-import 'package:travel_app/src/components/widget_profile/widget_title_settings.dart';
+import 'package:travel_app/src/presentation/profile/component/widget_address_profile.dart';
+import 'package:travel_app/src/presentation/profile/component/widget_image_profile.dart';
+import 'package:travel_app/src/presentation/profile/component/widget_info_profile.dart';
+import 'package:travel_app/src/presentation/profile/component/widget_name_profile.dart';
+import 'package:travel_app/src/presentation/profile/component/widget_title_settings.dart';
+
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -125,7 +126,7 @@ Widget _buildGenaral(Size size) {
 }
 
 Widget _buildSettings() {
-  return const SettingsWidget();
+  return const TitleSettingsWidget();
 }
 
 Widget _buildImage() {

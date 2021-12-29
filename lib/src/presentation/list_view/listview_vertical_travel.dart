@@ -34,18 +34,18 @@ class ListViewVerticalTravel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Padding padding = MediaQuery.of(context).padding.bottom as Padding;
     Size size = MediaQuery.of(context).size;
     return ListView.builder(
         itemCount: popularTravel.length,
+        padding: EdgeInsets.zero,
         scrollDirection: Axis.vertical,
         itemBuilder: (BuildContext contFext, int index) {
           return Container(
-            padding: const EdgeInsets.only(left: 8, top: 10, right: 8),
+           padding:  EdgeInsets.only(left: size.width * 0.02, right: size.width * 0.03, top: size.height * 0.015),
             child: Column(
               children: [
                 Container(
-                  height: 90,
+                  height: size.height * 0.1,
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     color: Colors.white,
@@ -55,39 +55,41 @@ class ListViewVerticalTravel extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                      const SizedBox(
-                        width: 9,
+                      SizedBox(
+                        width: size.width * 0.02,
                       ),
                       Container(
-                        height: 77.0,
-                        width: 77.0,
+                        height: size.height * 0.09,
+                        width: size.width * 0.19,
                         decoration: BoxDecoration(
                           borderRadius:
                               const BorderRadius.all(Radius.circular(12.0)),
                           image: DecorationImage(
-                            image: NetworkImage(
-                                popularTravel[index].imagePopular),
+                            image:
+                                NetworkImage(popularTravel[index].imagePopular),
                             fit: BoxFit.cover,
                           ),
                           // shape: BoxShape.circle,
                         ),
                       ),
                       SizedBox(
-                        width: 200,
+                        width: size.width * 0.6,
                         // cai nay la nhu nao
                         child: Column(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(top: 15, left: 30),
+                              padding: EdgeInsets.only(
+                                  top: size.height * 0.015,
+                                  left: size.width * 0.07),
                               child: Row(
                                 children: [
-                                  const SizedBox(
-                                    height: 35,
+                                  SizedBox(
+                                    height: size.height * 0.037,
                                   ),
                                   Text(
                                     popularTravel[index].namePopular,
-                                    style: const TextStyle(
-                                        fontSize: 18,
+                                    style: TextStyle(
+                                        fontSize: size.height * 0.024,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black),
                                   ),
@@ -95,14 +97,15 @@ class ListViewVerticalTravel extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 30, top: 4),
+                              padding: EdgeInsets.only(
+                                  left: size.width * 0.075,
+                                  top: size.height * 0.004),
                               child: Row(
                                 children: [
                                   Text(
                                     popularTravel[index].timePopular,
-                                    style: const TextStyle(
-                                        fontSize: 15.8,
+                                    style: TextStyle(
+                                        fontSize: size.height * 0.018,
                                         fontWeight: FontWeight.normal,
                                         color: Colors.grey),
                                   )

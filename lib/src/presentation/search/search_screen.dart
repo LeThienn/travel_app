@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/src/components/widget_search/list/listview_horizontal_travel.dart';
-import 'package:travel_app/src/components/widget_search/list/listview_vertical_travel.dart';
-import 'package:travel_app/src/components/widget_search/widget_search_travel.dart';
-import 'package:travel_app/src/components/widget_search/widget_title_search.dart';
+import 'package:travel_app/src/presentation/list_view/listview_horizontal_travel.dart';
+import 'package:travel_app/src/presentation/list_view/listview_vertical_travel.dart';
+import 'package:travel_app/src/presentation/search/component/widget_search_travel.dart';
+import 'package:travel_app/src/presentation/search/component/widget_text_search.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -16,38 +16,41 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(12),
       child: Container(
           color: Colors.grey.shade100,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(
                 children: [
-                  const SizedBox(
-                    height: 30,
+                  SizedBox(
+                    height: size.height * 0.035,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 7),
+                    padding: EdgeInsets.only(left: size.width * 0.03),
                     child: _buildSearchTitle(),
                   ),
                   SizedBox(
                     height: size.height * 0.015,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 7, right: 7),
+                    padding: EdgeInsets.only(
+                        left: size.width * 0.03, right: size.width * 0.03),
                     child: _buildSearch(),
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: size.height * 0.03,
                   ),
                   Row(
-                    children: const [
+                    children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 7),
+                        padding: EdgeInsets.only(left: size.height * 0.01),
                         child: Text(
                           "For you",
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                              fontSize: size.height * 0.025,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                     ],
@@ -55,23 +58,24 @@ class _SearchScreenState extends State<SearchScreen> {
                 ],
               ),
               Expanded(
-                flex: 1, // ??
+                flex: 1,
                 child: _buildListHorizontal(),
               ),
-              
               Row(
-                children: const [
+                children: [
                   Padding(
-                    padding: EdgeInsets.only(
-                      left: 7,
-                    ),
+                    padding: EdgeInsets.only(left: size.height * 0.01),
                     child: Text(
                       "Popular",
-                      style:
-                          TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: size.height * 0.025,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: size.height * 0.015,
               ),
               Expanded(
                 flex: 1,
@@ -88,7 +92,7 @@ Widget _buildSearchTitle() {
 }
 
 Widget _buildSearch() {
-  return SearchWidget();
+  return SearchTravelWidget();
 }
 
 Widget _buildListHorizontal() {

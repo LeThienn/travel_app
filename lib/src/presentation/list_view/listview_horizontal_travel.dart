@@ -5,31 +5,31 @@ import 'package:travel_app/src/resource/model/foryou_travel.dart';
 class ListViewHorizoltalTravel extends StatelessWidget {
   ListViewHorizoltalTravel({Key? key}) : super(key: key);
 
-  final List<Travel> travel = [
-    Travel(
-        name: "Lighthouse",
-        location: "Edinburgh",
-        image:
+  final List<ForYouTravel> travelForYou = [
+    ForYouTravel(
+        nameForYou: "Lighthouse",
+        locationForYou: "Edinburgh",
+        imageForYou:
             "https://images.unsplash.com/photo-1522679056866-8dbbc8774a9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"),
-    Travel(
-        name: "Eiffel tower",
-        location: "Paris",
-        image:
+    ForYouTravel(
+        nameForYou: "Eiffel tower",
+        locationForYou: "Paris",
+        imageForYou:
             "https://www.grunge.com/img/gallery/the-bizarre-history-of-the-eiffel-tower/intro-1602781703.jpg"),
-    Travel(
-        name: "Big Ben",
-        location: "London",
-        image:
+    ForYouTravel(
+        nameForYou: "Big Ben",
+        locationForYou: "London",
+        imageForYou:
             "https://megastudy.edu.vn/upload/tinymce/thap-dong-ho-big-ben-9-1024x683.jpg"),
-    Travel(
-        name: "Hội An",
-        location: "Hà Nội",
-        image:
+    ForYouTravel(
+        nameForYou: "Hội An",
+        locationForYou: "Hà Nội",
+        imageForYou:
             "https://dulichkhampha24.com/wp-content/uploads/2021/03/hoi-an-thanh-pho-lang-man-nhat-the-gioi.jpg"),
-    Travel(
-        name: "Vịnh Hạ Long",
-        location: "Quảng Ninh",
-        image:
+    ForYouTravel(
+        nameForYou: "Vịnh Hạ Long",
+        locationForYou: "Quảng Ninh",
+        imageForYou:
             "http://baochinhphu.vn/Uploaded/duongphuonglien/2020_07_06/ha%20long.jpg"),
   ];
 
@@ -38,55 +38,56 @@ class ListViewHorizoltalTravel extends StatelessWidget {
     // Padding padding = MediaQuery.of(context).padding.bottom as Padding;
     Size size = MediaQuery.of(context).size;
     return ListView.builder(
-        itemCount: travel.length,
+        itemCount: travelForYou.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (BuildContext contFext, int index) {
           return Container(
-            padding: const EdgeInsets.only(left: 8, top: 15, right: 8),
+            padding: EdgeInsets.only(top: size.height * 0.02),
             child: Column(
               children: [
                 Container(
-                  height: 150.0,
-                  width: 160.0,
+                  height: size.height * 0.2,
+                  width: size.width * 0.39,
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(30.0)),
+                    borderRadius: const BorderRadius.all(Radius.circular(25.0)),
                     image: DecorationImage(
-                      image: NetworkImage(travel[index].image),
+                      image: NetworkImage(travelForYou[index].imageForYou),
                       fit: BoxFit.cover,
                     ),
                     // shape: BoxShape.circle,
                   ),
                 ),
                 SizedBox(
-                  width: 160, // fix chữ hỏi ??????
+                  width: size.width * 0.42,
                   child: Column(
                     children: [
                       Row(
                         children: [
-                          const SizedBox(
-                            width: 10,
-                            height: 35,
+                          SizedBox(
+                            width: size.width * 0.03,
+                            height: size.width * 0.07,
                           ),
                           Text(
-                            travel[index].name,
-                            style: const TextStyle(
-                                fontSize: 17,
+                            travelForYou[index].nameForYou,
+                            style: TextStyle(
+                                fontSize: size.height * 0.022,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black),
-                          ),
+                          ),  
                         ],
                       ),
                       Row(
                         children: [
-                          const SizedBox(
-                            width: 7,
+                          SizedBox(
+                            width: size.width * 0.019,
                           ),
-                          const Icon(
+                          Icon(
                             Icons.location_on,
                             color: Colors.blue,
+                            size: size.height * 0.026,
                           ),
                           Text(
-                            travel[index].location,
+                            travelForYou[index].locationForYou,
                             style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.blue),
