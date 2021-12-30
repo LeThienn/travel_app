@@ -17,7 +17,7 @@ class TitleSettingsWidget extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
-                    fontSize: size.height * 0.040,
+                    fontSize: size.height * 0.03,
                     fontStyle: FontStyle.normal,
                     decoration: TextDecoration.none),
               ),

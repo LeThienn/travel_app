@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/src/presentation/favorite/favorite_screen.dart';
 import 'package:travel_app/src/presentation/profile/profile_screen.dart';
 import 'package:travel_app/src/presentation/search/search_screen.dart';
 
@@ -31,7 +32,9 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           Container(
             child: SearchScreen(),
           ),
-          Container(),
+          Container(
+            child: FavoriteScreen(),
+          ),
           Container(
             child: ProfileScreen(),
           )

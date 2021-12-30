@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SearchTextWidget extends StatelessWidget {
-  const SearchTextWidget({Key? key}) : super(key: key);
+class FavoriteTextWidget extends StatelessWidget {
+  const FavoriteTextWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class SearchTextWidget extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(top: size.height * 0.02),
               child: Text(
-                "Search",
+                "Favorites",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
@@ -27,7 +27,7 @@ class SearchTextWidget extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {},
             child: const Icon(
-              Icons.slideshow_outlined,
+              Icons.search_outlined,
               color: Colors.black,
             ),
             style: ButtonStyle(
