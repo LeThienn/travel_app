@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/src/presentation/list_view/listview_horizontal_travel.dart';
-import 'package:travel_app/src/presentation/list_view/listview_vertical_travel.dart';
+import 'package:travel_app/src/presentation/list_view/listview_horizontal_search.dart';
+import 'package:travel_app/src/presentation/list_view/listview_vertical_search.dart';
 import 'package:travel_app/src/presentation/search/component/widget_search_travel.dart';
 import 'package:travel_app/src/presentation/search/component/widget_text_search.dart';
 

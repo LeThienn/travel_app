@@ -28,13 +28,13 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
       body: PageView(
         controller: pageController,
         children: [
-          Container(),
-          Container(
-            child: SearchScreen(),
-          ),
           Container(
             child: FavoriteScreen(),
           ),
+          Container(
+            child: SearchScreen(),
+          ),
+          Container(),
           Container(
             child: ProfileScreen(),
           )
