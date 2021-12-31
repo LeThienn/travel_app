@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/src/presentation/list_view/listview_fav.dart';
-import 'package:travel_app/src/resource/model/fav_travel.dart';
-import 'package:travel_app/src/resource/model/popular_travel.dart';
 
 // class TabbarFavWidget extends sta {
 //   const TabbarFavWidget({Key? key}) : super(key: key);
 
 class TabbarFavWidget extends StatefulWidget {
-  TabbarFavWidget({Key? key}) : super(key: key);
+  const TabbarFavWidget({Key? key}) : super(key: key);
 
   @override
   _TabbarFavWidgetState createState() => _TabbarFavWidgetState();
@@ -61,7 +59,7 @@ class _TabbarFavWidgetState extends State<TabbarFavWidget>
         const SizedBox(
           height: 20,
         ),
-        Container(
+        SizedBox(
           height: 480,
           child: TabBarView(
             controller: _tabController,

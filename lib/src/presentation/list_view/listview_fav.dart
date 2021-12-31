@@ -34,13 +34,14 @@ class ListViewFav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return ListView.builder(
         itemCount: favTravel.length,
         padding: EdgeInsets.zero,
         scrollDirection: Axis.vertical,
         itemBuilder: (context, index) {
           return Container(
-            padding: const EdgeInsets.only(top: 10),
+            padding: EdgeInsets.only(top: size.height * 0.02),
             child: Column(
               children: [
                 Container(
@@ -55,19 +56,35 @@ class ListViewFav extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
-                        margin: const EdgeInsets.only(top: 10),
-                        height: 200,
-                        width: 320,
-                        decoration: BoxDecoration(
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(17.0)),
-                          image: DecorationImage(
-                            image: NetworkImage(favTravel[index].imageFav),
-                            fit: BoxFit.cover,
+                      Stack(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: size.height * 0.012),
+                            height: size.height * 0.27,
+                            width: size.width * 0.82,
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(17.0)),
+                              image: DecorationImage(
+                                image: NetworkImage(favTravel[index].imageFav),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
                           ),
-                          // shape: BoxShape.circle,
-                        ),
+                          Positioned(
+                            top: size.height * 0.03,
+                            left: size.width * 0.665,
+                            child: Container(
+                                height: size.height * 0.07,
+                                width: size.width * 0.1,
+                                decoration: const ShapeDecoration(
+                                    shape: CircleBorder(
+                                      side: BorderSide.none,
+                                    ),
+                                    color: Colors.white),
+                                child: const Icon(Icons.bookmark_outline)),
+                          )
+                        ],
                       ),
                       Column(
                         children: [
@@ -75,30 +92,29 @@ class ListViewFav extends StatelessWidget {
                             children: [
                               Padding(
                                 padding:
-                                    const EdgeInsets.only(left: 20, top: 20),
+                                    EdgeInsets.only(left: size.width * 0.05, top: size.height * 0.027),
                                 child: Row(
                                   children: [
                                     Text(
                                       favTravel[index].nameFav,
-                                      style: const TextStyle(
+                                      style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 17,
+                                          fontSize: size.height * 0.024,
                                           fontWeight: FontWeight.bold),
                                     ),
-                           
                                   ],
                                 ),
                               ),
                               Padding(
                                 padding:
-                                    const EdgeInsets.only(left: 20, top: 5),
+                                    EdgeInsets.only(left: size.width * 0.05, top: size.height * 0.005),
                                 child: Row(
                                   children: [
                                     Text(
                                       favTravel[index].timeFav,
-                                      style: const TextStyle(
+                                      style: TextStyle(
                                           color: Colors.grey,
-                                          fontSize: 15,
+                                          fontSize: size.height * 0.022,
                                           fontWeight: FontWeight.normal),
                                     ),
                                   ],
