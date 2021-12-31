@@ -47,7 +47,7 @@ class ListViewHorizoltalTravel extends StatelessWidget {
               children: [
                 Container(
                   height: size.height * 0.2,
-                  width: size.width * 0.39,
+                  width: size.height * 0.2, // những lúc nào thì dùng 
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(25.0)),
                     image: DecorationImage(
@@ -58,7 +58,7 @@ class ListViewHorizoltalTravel extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: size.width * 0.42,
+                  width: size.height * 0.21,
                   child: Column(
                     children: [
                       Row(

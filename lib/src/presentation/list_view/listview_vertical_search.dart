@@ -42,9 +42,9 @@ class ListViewVerticalTravel extends StatelessWidget {
         itemBuilder: (BuildContext contFext, int index) {
           return Container(
             padding: EdgeInsets.only(
-                left: size.width * 0.02,
-                right: size.width * 0.03,
-                top: size.height * 0.015),
+                left: size.height * 0.01,
+                right: size.height * 0.01,
+                top: size.height * 0.01),
             child: Column(
               children: [
                 Container(
@@ -63,7 +63,7 @@ class ListViewVerticalTravel extends StatelessWidget {
                       ),
                       Container(
                         height: size.height * 0.1,
-                        width: size.width * 0.19,
+                        width: size.height * 0.1,
                         decoration: BoxDecoration(
                           borderRadius:
                               const BorderRadius.all(Radius.circular(12.0)),
@@ -76,18 +76,18 @@ class ListViewVerticalTravel extends StatelessWidget {
                         ),
                       ),
                       SizedBox( // nho cai nay
-                        width: size.width * 0.6,
+                        width: size.height * 0.3,
                         // cai nay la nhu nao
                         child: Column(
                           children: [
                             Padding(
                               padding: EdgeInsets.only(
-                                  top: size.height * 0.015,
+                                  top: size.height * 0.025,
                                   left: size.width * 0.07),
                               child: Row(
                                 children: [
                                   SizedBox(
-                                    height: size.height * 0.048,
+                                    height: size.height * 0.04,
                                   ),
                                   Text(
                                     popularTravel[index].namePopular,
@@ -101,8 +101,8 @@ class ListViewVerticalTravel extends StatelessWidget {
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                  left: size.width * 0.072,
-                                  top: size.height * 0.004),
+                                  left: size.width * 0.07,
+                                  top: size.height * 0.003),
                               child: Row(
                                 children: [
                                   Text(

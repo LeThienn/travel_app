@@ -45,8 +45,8 @@ class ListViewFav extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  height: 290,
-                  width: 340,
+                  height: size.height * 0.4,
+                  width: size.height * 0.46,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(
@@ -61,7 +61,7 @@ class ListViewFav extends StatelessWidget {
                           Container(
                             margin: EdgeInsets.only(top: size.height * 0.012),
                             height: size.height * 0.27,
-                            width: size.width * 0.82,
+                            width: size.height * 0.43,
                             decoration: BoxDecoration(
                               borderRadius:
                                   const BorderRadius.all(Radius.circular(17.0)),
@@ -73,7 +73,7 @@ class ListViewFav extends StatelessWidget {
                           ),
                           Positioned(
                             top: size.height * 0.03,
-                            left: size.width * 0.665,
+                            left: size.height * 0.36,
                             child: Container(
                                 height: size.height * 0.07,
                                 width: size.width * 0.1,
@@ -92,7 +92,7 @@ class ListViewFav extends StatelessWidget {
                             children: [
                               Padding(
                                 padding:
-                                    EdgeInsets.only(left: size.width * 0.05, top: size.height * 0.027),
+                                    EdgeInsets.only(left: size.height * 0.02, top: size.height * 0.027),
                                 child: Row(
                                   children: [
                                     Text(
@@ -107,14 +107,14 @@ class ListViewFav extends StatelessWidget {
                               ),
                               Padding(
                                 padding:
-                                    EdgeInsets.only(left: size.width * 0.05, top: size.height * 0.005),
+                                    EdgeInsets.only(left: size.height * 0.02, top: size.height * 0.005),
                                 child: Row(
                                   children: [
                                     Text(
                                       favTravel[index].timeFav,
                                       style: TextStyle(
                                           color: Colors.grey,
-                                          fontSize: size.height * 0.022,
+                                          fontSize: size.height * 0.021,
                                           fontWeight: FontWeight.normal),
                                     ),
                                   ],

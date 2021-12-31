@@ -26,7 +26,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                   height: size.height * 0.05,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: size.width * 0.03),
+                  padding: EdgeInsets.only(left: size.height * 0.02),
                   child: _buildFavoriteText(),
                 ),
                 _buildTabBar()
@@ -44,5 +44,5 @@ Widget _buildFavoriteText() {
 }
 
 Widget _buildTabBar(){
-  return TabbarFavWidget();
+  return const TabbarFavWidget();
 }

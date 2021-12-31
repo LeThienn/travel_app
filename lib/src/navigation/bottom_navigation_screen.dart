@@ -39,6 +39,11 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
             child: ProfileScreen(),
           )
         ],
+        onPageChanged: (pageIndex) {
+          setState(() {
+            _selectedIndex = pageIndex;
+          });
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
@@ -56,6 +61,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.black,
+          
           onTap: onTapped),
     );
   }

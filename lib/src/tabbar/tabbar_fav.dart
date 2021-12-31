@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/src/configs/helpers/circle_tab_indicator.dart';
 import 'package:travel_app/src/presentation/list_view/listview_fav.dart';
-
-// class TabbarFavWidget extends sta {
-//   const TabbarFavWidget({Key? key}) : super(key: key);
 
 class TabbarFavWidget extends StatefulWidget {
   const TabbarFavWidget({Key? key}) : super(key: key);
@@ -28,19 +26,20 @@ class _TabbarFavWidgetState extends State<TabbarFavWidget>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 20),
+          margin: EdgeInsets.only(top: size.height * 0.02),
           child: Align(
             alignment: Alignment.centerLeft,
             child: TabBar(
               controller: _tabController,
-              labelPadding: const EdgeInsets.only(left: 20, right: 10),
+              labelPadding:
+                  EdgeInsets.only(left: size.height * 0.03, right: size.height * 0.01),
               labelColor: Colors.blue,
               isScrollable: true,
               unselectedLabelColor: Colors.black,
               unselectedLabelStyle:
                   const TextStyle(fontStyle: FontStyle.normal),
               labelStyle:
-                  const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                   TextStyle(fontSize: size.height * 0.025, fontWeight: FontWeight.bold),
               indicator: CircleTabIndicator(color: Colors.blue, radius: 4),
               tabs: const [
                 Tab(
@@ -56,11 +55,11 @@ class _TabbarFavWidgetState extends State<TabbarFavWidget>
             ),
           ),
         ),
-        const SizedBox(
-          height: 20,
+       SizedBox(
+          height: size.height * 0.01,
         ),
         SizedBox(
-          height: 480,
+          height: size.height * 0.68,
           child: TabBarView(
             controller: _tabController,
             children: [
@@ -77,34 +76,4 @@ class _TabbarFavWidgetState extends State<TabbarFavWidget>
 
 Widget _buildListViewFav() {
   return ListViewFav();
-}
-
-// ignore: must_be_immutable
-class CircleTabIndicator extends Decoration {
-  final Color color;
-  double radius;
-
-  CircleTabIndicator({required this.color, required this.radius});
-
-  @override
-  BoxPainter createBoxPainter([VoidCallback? onChanged]) {
-    return _CirclePainter(color: color, radius: radius);
-  }
-}
-
-class _CirclePainter extends BoxPainter {
-  final double radius;
-  late Color color;
-
-  _CirclePainter({required this.color, required this.radius});
-
-  @override
-  void paint(Canvas canvas, Offset offset, ImageConfiguration cfg) {
-    late Paint _paint;
-    _paint = Paint()..color = color;
-    _paint = _paint..isAntiAlias = true;
-    final Offset circleOffset =
-        Offset(cfg.size!.width / 2, cfg.size!.height - radius);
-    canvas.drawCircle(offset + circleOffset, radius, _paint);
-  }
 }
