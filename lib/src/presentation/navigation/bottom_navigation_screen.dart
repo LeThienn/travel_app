@@ -34,7 +34,9 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           Container(
             child: const SearchScreen(),
           ),
-          Container(),
+          Container(
+            child: const FavoriteScreen(),
+          ),
           Container(
             child: const ProfileScreen(),
           )

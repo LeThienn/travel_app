@@ -1,8 +1,8 @@
-class FavTravel {
+class FavoriteTravel {
   String imageFav;
   String nameFav;
   String timeFav;
-  FavTravel(
+  FavoriteTravel(
       {required this.nameFav,
       required this.timeFav,
       required this.imageFav});

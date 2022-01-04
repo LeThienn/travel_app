@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/src/configs/helpers/circle_tab_indicator.dart';
 import 'package:travel_app/src/presentation/list_view/listview_fav.dart';
+import 'component/circle_tab_indicator.dart';
 
-class TabbarFavWidget extends StatefulWidget {
-  const TabbarFavWidget({Key? key}) : super(key: key);
+class TabbarFavoriteWidget extends StatefulWidget {
+  const TabbarFavoriteWidget({Key? key}) : super(key: key);
 
   @override
-  _TabbarFavWidgetState createState() => _TabbarFavWidgetState();
+  _TabbarFavoriteWidgetState createState() => _TabbarFavoriteWidgetState();
 }
 
-class _TabbarFavWidgetState extends State<TabbarFavWidget>
+class _TabbarFavoriteWidgetState extends State<TabbarFavoriteWidget>
     with TickerProviderStateMixin {
   late TabController _tabController;
 

@@ -29,7 +29,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: size.width * 0.03),
-                    child: _buildSearchTitle(),
+                    child: _buildSearchText(),
                   ),
                   SizedBox(
                     height: size.height * 0.015,
@@ -42,40 +42,20 @@ class _SearchScreenState extends State<SearchScreen> {
                   SizedBox(
                     height: size.height * 0.03,
                   ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: size.height * 0.01),
-                        child: Text(
-                          "For you",
-                          style: TextStyle(
-                              fontSize: size.height * 0.025,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ],
-                  ),
+                  _buildTextForYou(size)
                 ],
               ),
-              SizedBox(height: size.height * 0.01,),
+              SizedBox(
+                height: size.height * 0.01,
+              ),
               Expanded(
                 flex: 1,
                 child: _buildListHorizontal(),
               ),
-              SizedBox(height: size.height * 0.012,),
-              Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: size.height * 0.01),
-                    child: Text(
-                      "Popular",
-                      style: TextStyle(
-                          fontSize: size.height * 0.025,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ],
+              SizedBox(
+                height: size.height * 0.012,
               ),
+              _buildTextPopular(size),
               SizedBox(
                 height: size.height * 0.015,
               ),
@@ -89,7 +69,7 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 }
 
-Widget _buildSearchTitle() {
+Widget _buildSearchText() {
   return const SearchTextWidget();
 }
 
@@ -103,4 +83,34 @@ Widget _buildListHorizontal() {
 
 Widget _buildListVertivalTravel() {
   return ListViewVerticalTravel();
+}
+
+Widget _buildTextForYou(Size size) {
+  return Row(
+    children: [
+      Padding(
+        padding: EdgeInsets.only(left: size.height * 0.01),
+        child: Text(
+          "For you",
+          style: TextStyle(
+              fontSize: size.height * 0.025, fontWeight: FontWeight.bold),
+        ),
+      ),
+    ],
+  );
+}
+
+Widget _buildTextPopular(Size size) {
+  return Row(
+    children: [
+      Padding(
+        padding: EdgeInsets.only(left: size.height * 0.01),
+        child: Text(
+          "Popular",
+          style: TextStyle(
+              fontSize: size.height * 0.025, fontWeight: FontWeight.bold),
+        ),
+      ),
+    ],
+  );
 }

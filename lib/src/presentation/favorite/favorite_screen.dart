@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:travel_app/src/presentation/favorite/component/widget_text_favorite.dart';
-import 'package:travel_app/src/tabbar/tabbar_fav.dart';
+import 'package:travel_app/src/presentation/tabbar/tabbar_favorite.dart';
+
 
 class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({Key? key}) : super(key: key);
@@ -44,5 +44,5 @@ Widget _buildFavoriteText() {
 }
 
 Widget _buildTabBar(){
-  return const TabbarFavWidget();
+  return const TabbarFavoriteWidget();
 }
