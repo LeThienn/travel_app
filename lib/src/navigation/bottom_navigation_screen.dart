@@ -29,14 +29,14 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         controller: pageController,
         children: [
           Container(
-            child: FavoriteScreen(),
+            child: const FavoriteScreen(),
           ),
           Container(
-            child: SearchScreen(),
+            child: const SearchScreen(),
           ),
           Container(),
           Container(
-            child: ProfileScreen(),
+            child: const ProfileScreen(),
           )
         ],
         onPageChanged: (pageIndex) {
