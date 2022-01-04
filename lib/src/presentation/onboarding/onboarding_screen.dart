@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:travel_app/src/configs/constants/app_images.dart';
 import 'package:travel_app/src/navigation/bottom_navigation_screen.dart';
 import 'package:travel_app/src/presentation/onboarding/component/widget_text_onboarding.dart';
 
@@ -14,9 +15,9 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   List<OnBoarding> onBoarding = [
-    OnBoarding(image: 'assets/images/5.png'),
-    OnBoarding(image: 'assets/images/6.png'),
-    OnBoarding(image: 'assets/images/5.png')
+    OnBoarding(image: AppImages.img5),
+    OnBoarding(image: AppImages.img6),
+    OnBoarding(image: AppImages.img5),
   ];
   int curenPage = 0;
   var pageviewController = PageController(initialPage: 0);
