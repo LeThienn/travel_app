@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:travel_app/src/presentation/base/base.dart';
 import 'package:travel_app/src/presentation/login/login_viewmodel.dart';
