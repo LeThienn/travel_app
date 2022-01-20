@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/src/presentation/base/base.dart';
 import 'package:travel_app/src/presentation/favorite/favorite_screen.dart';
 import 'package:travel_app/src/presentation/profile/profile_screen.dart';
 import 'package:travel_app/src/presentation/search/search_screen.dart';
+
+import 'bottom_navigation.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({Key? key}) : super(key: key);
@@ -11,60 +14,38 @@ class BottomNavigationScreen extends StatefulWidget {
 }
 
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
-  int _selectedIndex = 0;
-  PageController pageController = PageController();
-
-  void onTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-    pageController.jumpToPage(index);
-    //duration: const Duration(milliseconds: 900), curve: Curves.fastLinearToSlowEaseIn
-  }
+  // ignore: unused_field
+  BottomNavigationViewModel? _viewModel;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: PageView(
-        controller: pageController,
-        children: [
-          Container(
-            child: const FavoriteScreen(),
+    return BaseWidget<BottomNavigationViewModel>(
+      onViewModelReady: (viewModel) {
+        _viewModel = viewModel?..init();
+      },
+      viewModel: BottomNavigationViewModel(),
+      builder: (context, viewModel, child) {
+        return Scaffold(
+          body: PageView(
+            controller: viewModel.pageController,
+            children: const [SearchScreen(), FavoriteScreen(), ProfileScreen()],
+            onPageChanged: viewModel.onPageChanged,
           ),
-          Container(
-            child: const SearchScreen(),
-          ),
-          Container(
-            child: const FavoriteScreen(),
-          ),
-          Container(
-            child: const ProfileScreen(),
-          )
-        ],
-        onPageChanged: (pageIndex) {
-          setState(() {
-            _selectedIndex = pageIndex;
-          });
-        },
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.search_outlined), label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.bookmark_outline), label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings_outlined), label: ''),
-          ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.blue,
-          unselectedItemColor: Colors.black,
-          
-          onTap: onTapped),
+          bottomNavigationBar: BottomNavigationBar(
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.home_outlined), label: ''),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.bookmark_outline), label: ''),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.settings_outlined), label: ''),
+              ],
+              currentIndex: viewModel.selectedIndex,
+              selectedItemColor: Colors.blue,
+              unselectedItemColor: Colors.black,
+              onTap: viewModel.onTapped),
+        );
+      },
     );
   }
 }

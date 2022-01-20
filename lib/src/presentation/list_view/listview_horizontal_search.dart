@@ -30,7 +30,7 @@ class ListViewHorizoltalTravel extends StatelessWidget {
         nameForYou: "Vịnh Hạ Long",
         locationForYou: "Quảng Ninh",
         imageForYou:
-            "http://baochinhphu.vn/Uploaded/duongphuonglien/2020_07_06/ha%20long.jpg"),
+            "https://vietnamembassy-turkey.org/wp-content/uploads/2019/12/V%E1%BB%8Bnh-H%E1%BA%A1-Long.jpg"),
   ];
 
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 class AddressProfileWidget extends StatelessWidget {
   const AddressProfileWidget({Key? key}) : super(key: key);
 
@@ -7,7 +7,7 @@ class AddressProfileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width * 0.51,
+      width: 185.w,
       height: size.height * 0.06,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(30.0)),

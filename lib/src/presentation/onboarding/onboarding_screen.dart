@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:travel_app/src/configs/constants/app_images.dart';
+import 'package:travel_app/src/presentation/login/login_screen.dart';
 import 'package:travel_app/src/presentation/navigation/bottom_navigation_screen.dart';
 import 'package:travel_app/src/presentation/onboarding/component/widget_text_onboarding.dart';
 import 'package:travel_app/src/resource/model/onboarding.dart';
@@ -35,7 +36,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           if (curenPage == onBoarding.length - 1) {
             Future.delayed(const Duration(seconds: 4), () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const BottomNavigationScreen()));
+                  MaterialPageRoute(builder: (context) => const LoginScreen()));
             });
           }
         });
